@@ -3,7 +3,7 @@ package app.superesenou.ru.weatherapplication.model;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class Query {
+public class Results {
     @SerializedName("count")
     @Expose
     private String count;
@@ -15,10 +15,6 @@ public class Query {
     @SerializedName("lang")
     @Expose
     private  String lang;
-
-    @SerializedName("results")
-    @Expose
-    protected Query results;
 
     public String getCount() {
         return count;
@@ -51,4 +47,10 @@ public class Query {
     public void setResults(Query results) {
         this.results = results;
     }
+
+    @SerializedName("results")
+    @Expose
+    protected Query results;
+
+
 }

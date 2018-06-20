@@ -3,7 +3,7 @@ package app.superesenou.ru.weatherapplication.model;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class Result {
+public class Query {
    @SerializedName("query")
    @Expose
     private String query;
