@@ -36,11 +36,10 @@ public class AdapterWeather extends RecyclerView.Adapter<AdapterWeather.ViewHold
         Forecast Day=forecasts.get(position);
         holder.day.setText(Day.getDay());
         holder.text.setText(Day.getText());
-        holder.high.setText(Day.getHigh());
-        holder.low.setText(Day.getLow());
-
-
-
+        String a=Day.getHigh();
+        holder.high.setText(Day.getHigh()+"\u00b0");
+        holder.low.setText(Day.getLow()+"\u00b0");
+        holder.data.setText(Day.getDate());
     }
 
     @Override
@@ -49,9 +48,9 @@ public class AdapterWeather extends RecyclerView.Adapter<AdapterWeather.ViewHold
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        TextView day,text,high,low;
+        TextView day,text,high,low,data;
 
-        int resId;
+
         public ViewHolder(View itemView) {
 
             super(itemView);
@@ -59,6 +58,7 @@ public class AdapterWeather extends RecyclerView.Adapter<AdapterWeather.ViewHold
             text=(TextView)itemView.findViewById(R.id.text);
             low=(TextView)itemView.findViewById(R.id.low);
             high=(TextView)itemView.findViewById(R.id.high);
+            data=(TextView)itemView.findViewById(R.id.data);
 
         }
 
